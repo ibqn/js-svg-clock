@@ -5,7 +5,7 @@
   "repository": "ibqn/js-svg-clock",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently \"npm run sass\" \"npm run sass:watch\" \"npm run serve\"",
+    "start": "concurrently --names \"SASS,WATCH,SERVE\" --prefix-colors \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm run sass\" \"npm run sass:watch\" \"npm run serve\"",
     "serve": "lite-server",
     "sass": "node-sass style.sass --output ./ --indent-width 4 --output-style expanded --indent-type space --source-map true",
     "sass:watch": "npm run sass -- --watch"
