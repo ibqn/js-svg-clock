@@ -7,28 +7,28 @@
     let minuteCor = 0;
     let secondCor = 0;
 
-    const idate = new Date();
+    const date = new Date();
 
     let params = {
-        'hour': idate.getHours(),
-        'minute': idate.getMinutes(),
-        'second': idate.getSeconds()
+        'hour': date.getHours(),
+        'minute': date.getMinutes(),
+        'second': date.getSeconds()
     };
 
-    const rot_func = (arg) => {
+    const rotFunc = (arg) => {
         const date = new Date();
 
         const hour = date.getHours();
         const minute = date.getMinutes();
         const second = date.getSeconds();
 
-        hourCor += (arg.hour > params.hour) ? 24 : 0;
-        minuteCor += (arg.minute > params.minute) ? 60 : 0;
+        hourCor += (arg.hour > hour) ? 24 : 0;
+        minuteCor += (arg.minute > minute) ? 60 : 0;
         secondCor += (arg.second > second) ? 60 : 0;
 
-        const hourPos = (hourCor + params.hour)*30;
-        const minutePos = (minuteCor + params.minute)*6;
-        const secondPos = (secondCor + second)*6;
+        const hourPos = (hourCor + hour) * 30;
+        const minutePos = (minuteCor + minute) * 6;
+        const secondPos = (secondCor + second) * 6;
 
         //console.log(`prev second ${arg.second} - new second ${second} - angle ${secondPos}`);
 
@@ -41,6 +41,6 @@
         SECONDHAND.style.transform = `rotate(${secondPos}deg)`;
     };
 
-    setInterval(rot_func, 500, params);
+    setInterval(rotFunc, 500, params);
 
 })();
