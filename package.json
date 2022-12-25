@@ -5,18 +5,12 @@
   "repository": "ibqn/js-svg-clock",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently --names \"SASS,WATCH,SERVE\" --prefix-colors \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm run sass\" \"npm run sass:watch\" \"npm run serve\"",
-    "serve": "lite-server",
-    "sass": "node-sass style.sass --output ./ --indent-width 4 --output-style expanded --indent-type space --source-map true",
-    "sass:watch": "npm run sass -- --watch"
+    "sass": "sass style.sass style.css",
+    "watch": "npm run sass -- --watch"
   },
   "author": "ibqn",
   "license": "ISC",
-  "dependencies": {
-  },
   "devDependencies": {
-    "lite-server": "^2.2.2",
-    "concurrently": "^3.5.0",
-    "node-sass": "^4.5.3"
+    "sass": "^1.55.0"
   }
 }
