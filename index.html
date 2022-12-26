@@ -5,76 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>A Digital Analog Clock</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="script.js" async defer></script>
   </head>
 
   <body>
     <main class="main">
       <div class="clockbox">
         <svg
-          id="clock"
           xmlns="http://www.w3.org/2000/svg"
           width="600"
           height="600"
+          id="clock"
           viewBox="0 0 600 600"
         >
           <defs>
-            <style>
-              .cls-1 {
-                fill: url(#radial-gradient);
-              }
-
-              .cls-2,
-              .cls-3,
-              .cls-4,
-              .cls-5,
-              .cls-6,
-              .cls-7 {
-                fill: none;
-                stroke-miterlimit: 10;
-              }
-
-              .cls-2 {
-                stroke: #b3b3b3;
-              }
-
-              .cls-3 {
-                stroke: gray;
-                stroke-width: 2px;
-              }
-
-              .cls-4,
-              .cls-5 {
-                stroke: #000;
-              }
-
-              .cls-4 {
-                stroke-width: 4px;
-              }
-
-              .cls-5,
-              .cls-6,
-              .cls-7 {
-                stroke-linecap: round;
-              }
-
-              .cls-5 {
-                stroke-width: 16px;
-              }
-
-              .cls-6 {
-                stroke: #4d4d4d;
-                stroke-width: 10px;
-              }
-
-              .cls-7 {
-                stroke: #29abe2;
-                stroke-width: 3px;
-              }
-
-              .cls-8 {
-                fill: #29abe2;
-              }
-            </style>
             <radialGradient
               id="radial-gradient"
               cx="273.65"
@@ -82,69 +26,85 @@
               r="259.07"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.89" stop-color="#fff" stop-opacity="0" />
-              <stop offset="0.93" stop-color="#fefefe" stop-opacity="0.01" />
-              <stop offset="0.95" stop-color="#fbfbfb" stop-opacity="0.05" />
-              <stop offset="0.96" stop-color="#f6f6f6" stop-opacity="0.11" />
-              <stop offset="0.97" stop-color="#efefef" stop-opacity="0.21" />
-              <stop offset="0.98" stop-color="#e6e6e6" stop-opacity="0.33" />
-              <stop offset="0.98" stop-color="#dadada" stop-opacity="0.48" />
-              <stop offset="0.99" stop-color="#ccc" stop-opacity="0.66" />
-              <stop offset="1" stop-color="#bdbdbd" stop-opacity="0.87" />
+              <stop offset=".89" stop-color="#fff" stop-opacity="0" />
+              <stop offset=".93" stop-color="#fefefe" stop-opacity=".01" />
+              <stop offset=".95" stop-color="#fbfbfb" stop-opacity=".05" />
+              <stop offset=".96" stop-color="#f6f6f6" stop-opacity=".11" />
+              <stop offset=".97" stop-color="#efefef" stop-opacity=".21" />
+              <stop offset=".98" stop-color="#e6e6e6" stop-opacity=".33" />
+              <stop offset=".98" stop-color="#dadada" stop-opacity=".48" />
+              <stop offset=".99" stop-color="#ccc" stop-opacity=".66" />
+              <stop offset="1" stop-color="#bdbdbd" stop-opacity=".87" />
               <stop offset="1" stop-color="#b3b3b3" />
             </radialGradient>
           </defs>
-
-          <g id="face"></g>
-          <g id="hour">
-            <line
-              class="cls-5"
-              x1="273.46"
-              y1="109.47"
-              x2="273.65"
-              y2="275.85"
-            />
-          </g>
-          <g id="minute">
-            <line
-              class="cls-6"
-              x1="273.65"
-              y1="273.65"
-              x2="273.65"
-              y2="58.06"
-            />
-          </g>
-
-          <g>
-            <circle class="cls-1" cx="273.65" cy="273.65" r="259.07" />
-            <circle class="cls-2" cx="273.65" cy="273.65" r="273.15" />
-          </g>
           <path
-            class="cls-3"
-            d="M299.9,54.42V66.65m0,478.93V533.35M275.51,67.93l-1.28-12.17m51.34,488.48-1.28-12.17M251.38,71.75l-2.54-12m99.58,468.47,2.54,12M227.79,78.07L224,66.44M375.79,533.56L372,521.93M200,75.65l5,11.18m194.8,437.53-5-11.18M183.23,97.91l-6.12-10.59M422.69,512.68l-6.12-10.59m-261-400.77,7.19,9.9M437.06,488.78l7.19,9.9M135.57,117.5l8.19,9.09M464.23,482.5L456,473.41M117.4,135.67l9.09,8.19M482.4,464.33l-9.09-8.19m-362.2-293.3-9.9-7.19m397.36,288.7-9.9-7.19M97.81,183.33l-10.59-6.12M512.58,422.79L502,416.68M75.55,200.11l11.18,5M513.08,394.91l11.18,5M66.34,224.11L78,227.89m455.49,148-11.63-3.78M59.68,248.94l12,2.54m456.5,97,12,2.54M55.66,274.33l12.17,1.28m476.31,50.06L532,324.39M54.32,300H66.55m478.93,0H533.25M55.66,325.67l12.17-1.28m476.31-50.06L532,275.61M59.68,351.06l12-2.54m468.47-99.58-12,2.54M66.34,375.89L78,372.11m455.49-148-11.63,3.78m-446.28,172,11.18-5m437.53-194.8-11.18,5M97.81,416.68l-10.59,6.12M512.58,177.21L502,183.33m-400.77,261,9.9-7.19M498.58,155.65l-9.9,7.19M117.4,464.33l9.09-8.19M482.4,135.67l-9.09,8.19M135.57,482.5l8.19-9.09M464.23,117.5L456,126.59M155.55,498.68l7.19-9.9M444.25,101.32l-7.19,9.9m-260,401.47,6.12-10.59M422.69,87.32l-6.12,10.59M200,524.35l5-11.18M399.79,75.65l-5,11.18M224,533.56l3.78-11.63m148-455.49L372,78.07M248.84,540.22l2.54-12M351,59.78l-2.54,12M274.23,544.24l1.28-12.17M325.57,55.76l-1.28,12.17"
-            transform="translate(-26.35 -26.35)"
+            id="hour"
+            fill="none"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="16"
+            d="m273.46 109.47.19 166.38"
           />
           <path
-            class="cls-4"
-            d="M299.9,53.42v16m0,477.13v-16M184.63,100.34l-8-13.89M423.19,513.55l-8-13.89m-328.82-323,13.89,8M499.56,415.28l13.89,8M53.32,300h16m477.13,0h-16M86.35,423.29l13.89-8M513.45,176.71l-13.89,8m-323,328.82,8-13.89M423.19,86.45l-8,13.89"
-            transform="translate(-26.35 -26.35)"
+            id="minute"
+            fill="none"
+            stroke="#4d4d4d"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="10"
+            d="M273.65 273.65V58.06"
           />
-
+          <circle
+            cx="273.65"
+            cy="273.65"
+            r="259.07"
+            fill="url(#radial-gradient)"
+          />
+          <circle
+            cx="273.65"
+            cy="273.65"
+            r="273.15"
+            fill="none"
+            stroke="#b3b3b3"
+            stroke-miterlimit="10"
+          />
+          <path
+            fill="none"
+            stroke="gray"
+            stroke-miterlimit="10"
+            stroke-width="2"
+            d="M273.55 28.07V40.3m0 478.93V507M249.16 41.58l-1.28-12.17m51.34 488.48-1.28-12.17M225.03 45.4l-2.54-12m99.58 468.47 2.54 12M201.44 51.72l-3.79-11.63m151.79 467.12-3.79-11.63m-172-446.28 5 11.18m194.8 437.53-5-11.18M156.88 71.56l-6.12-10.59m245.58 425.36-6.12-10.59m-261-400.77 7.19 9.9m274.3 377.56 7.19 9.9M109.22 91.15l8.19 9.09m320.47 355.91-8.23-9.09M91.05 109.32l9.09 8.19m355.91 320.47-9.09-8.19m-362.2-293.3-9.9-7.19M472.22 418l-9.9-7.19M71.46 156.98l-10.59-6.12m425.36 245.58-10.58-6.11M49.2 173.76l11.18 5m426.35 189.8 11.18 5M39.99 197.76l11.66 3.78m455.49 148-11.63-3.78M33.33 222.59l12 2.54m456.5 97 12 2.54M29.31 247.98l12.17 1.28m476.31 50.06-12.14-1.28M27.97 273.65H40.2m478.93 0H506.9M29.31 299.32l12.17-1.28m476.31-50.06-12.14 1.28M33.33 324.71l12-2.54m468.47-99.58-12 2.54M39.99 349.54l11.66-3.78m455.49-148-11.63 3.78m-446.28 172 11.18-5m437.53-194.8-11.18 5M71.46 390.33l-10.59 6.12m425.36-245.59-10.58 6.12m-400.77 261 9.9-7.19M472.23 129.3l-9.9 7.19M91.05 437.98l9.09-8.19m355.91-320.47-9.09 8.19M109.22 456.15l8.19-9.09M437.88 91.15l-8.23 9.09M129.2 472.33l7.19-9.9M417.9 74.97l-7.19 9.9m-260 401.47 6.12-10.59M396.34 60.97l-6.12 10.59M173.65 498l5-11.18M373.44 49.3l-5 11.18M197.65 507.21l3.78-11.63m148-455.49-3.78 11.63M222.49 513.87l2.54-12m99.62-468.44-2.54 12m-74.23 472.46 1.28-12.17m50.06-476.31-1.28 12.17"
+          />
+          <path
+            fill="none"
+            stroke="#000"
+            stroke-miterlimit="10"
+            stroke-width="4"
+            d="M273.55 27.07v16m0 477.13v-16M158.28 73.99l-8-13.89m246.56 427.1-8-13.89m-328.82-323 13.89 8m399.3 230.62 13.89 8M26.97 273.65h16m477.13 0h-16M60 396.94l13.89-8M487.1 150.36l-13.89 8m-323 328.82 8-13.89M396.84 60.1l-8 13.89"
+          />
           <g id="second">
-            <line
-              class="cls-7"
-              x1="273.67"
-              y1="300.23"
-              x2="273.55"
-              y2="28.07"
+            <path
+              fill="none"
+              stroke="#29abe2"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="3"
+              d="m273.67 300.23-.12-272.16"
             />
-            <circle class="cls-8" cx="273.65" cy="273.65" r="7.84" />
-            <circle class="sizing-box" cx="273.65" cy="273.65" r="253.9" />
+            <circle cx="273.65" cy="273.65" r="7.84" fill="#29abe2" />
+            <circle
+              cx="273.65"
+              cy="273.65"
+              r="253.9"
+              fill="none"
+              class="sizing-box"
+            />
           </g>
         </svg>
       </div>
       <!-- .clockbox -->
     </main>
-    <script src="script.js" async defer></script>
   </body>
 </html>

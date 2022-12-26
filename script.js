@@ -9,7 +9,7 @@
 
   const date = new Date();
 
-  let params = {
+  const params = {
     hour: date.getHours(),
     minute: date.getMinutes(),
     second: date.getSeconds(),

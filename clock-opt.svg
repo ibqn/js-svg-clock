@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="clock" viewBox="0 0 600 600">
+  <defs>
+    <radialGradient id="radial-gradient" cx="273.65" cy="273.65" r="259.07" gradientUnits="userSpaceOnUse">
+      <stop offset=".89" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".93" stop-color="#fefefe" stop-opacity=".01"/>
+      <stop offset=".95" stop-color="#fbfbfb" stop-opacity=".05"/>
+      <stop offset=".96" stop-color="#f6f6f6" stop-opacity=".11"/>
+      <stop offset=".97" stop-color="#efefef" stop-opacity=".21"/>
+      <stop offset=".98" stop-color="#e6e6e6" stop-opacity=".33"/>
+      <stop offset=".98" stop-color="#dadada" stop-opacity=".48"/>
+      <stop offset=".99" stop-color="#ccc" stop-opacity=".66"/>
+      <stop offset="1" stop-color="#bdbdbd" stop-opacity=".87"/>
+      <stop offset="1" stop-color="#b3b3b3"/>
+    </radialGradient>
+  </defs>
+  <path id="hour" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="16" d="m273.46 109.47.19 166.38"/>
+  <path id="minute" fill="none" stroke="#4d4d4d" stroke-linecap="round" stroke-miterlimit="10" stroke-width="10" d="M273.65 273.65V58.06"/>
+  <circle cx="273.65" cy="273.65" r="259.07" fill="url(#radial-gradient)"/>
+  <circle cx="273.65" cy="273.65" r="273.15" fill="none" stroke="#b3b3b3" stroke-miterlimit="10"/>
+  <path fill="none" stroke="gray" stroke-miterlimit="10" stroke-width="2" d="M273.55 28.07V40.3m0 478.93V507M249.16 41.58l-1.28-12.17m51.34 488.48-1.28-12.17M225.03 45.4l-2.54-12m99.58 468.47 2.54 12M201.44 51.72l-3.79-11.63m151.79 467.12-3.79-11.63m-172-446.28 5 11.18m194.8 437.53-5-11.18M156.88 71.56l-6.12-10.59m245.58 425.36-6.12-10.59m-261-400.77 7.19 9.9m274.3 377.56 7.19 9.9M109.22 91.15l8.19 9.09m320.47 355.91-8.23-9.09M91.05 109.32l9.09 8.19m355.91 320.47-9.09-8.19m-362.2-293.3-9.9-7.19M472.22 418l-9.9-7.19M71.46 156.98l-10.59-6.12m425.36 245.58-10.58-6.11M49.2 173.76l11.18 5m426.35 189.8 11.18 5M39.99 197.76l11.66 3.78m455.49 148-11.63-3.78M33.33 222.59l12 2.54m456.5 97 12 2.54M29.31 247.98l12.17 1.28m476.31 50.06-12.14-1.28M27.97 273.65H40.2m478.93 0H506.9M29.31 299.32l12.17-1.28m476.31-50.06-12.14 1.28M33.33 324.71l12-2.54m468.47-99.58-12 2.54M39.99 349.54l11.66-3.78m455.49-148-11.63 3.78m-446.28 172 11.18-5m437.53-194.8-11.18 5M71.46 390.33l-10.59 6.12m425.36-245.59-10.58 6.12m-400.77 261 9.9-7.19M472.23 129.3l-9.9 7.19M91.05 437.98l9.09-8.19m355.91-320.47-9.09 8.19M109.22 456.15l8.19-9.09M437.88 91.15l-8.23 9.09M129.2 472.33l7.19-9.9M417.9 74.97l-7.19 9.9m-260 401.47 6.12-10.59M396.34 60.97l-6.12 10.59M173.65 498l5-11.18M373.44 49.3l-5 11.18M197.65 507.21l3.78-11.63m148-455.49-3.78 11.63M222.49 513.87l2.54-12m99.62-468.44-2.54 12m-74.23 472.46 1.28-12.17m50.06-476.31-1.28 12.17"/>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="4" d="M273.55 27.07v16m0 477.13v-16M158.28 73.99l-8-13.89m246.56 427.1-8-13.89m-328.82-323 13.89 8m399.3 230.62 13.89 8M26.97 273.65h16m477.13 0h-16M60 396.94l13.89-8M487.1 150.36l-13.89 8m-323 328.82 8-13.89M396.84 60.1l-8 13.89"/>
+  <g id="second">
+    <path fill="none" stroke="#29abe2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" d="m273.67 300.23-.12-272.16"/>
+    <circle cx="273.65" cy="273.65" r="7.84" fill="#29abe2"/>
+    <circle cx="273.65" cy="273.65" r="253.9" fill="none" class="sizing-box"/>
+  </g>
+</svg>
