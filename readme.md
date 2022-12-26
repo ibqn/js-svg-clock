@@ -5,6 +5,6 @@ pn sass
 pn dlx serve
 ```
 
-## screenshot
+## Screenshot
 
 ![Screenshot](./screenshot.png)
